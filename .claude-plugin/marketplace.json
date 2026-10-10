@@ -1,0 +1,1 @@
+{"$schema":"https://json.schemastore.org/claude-code-marketplace.json","name":"lhg-plugs","owner":{"name":"刘洪光"},"plugins":[{"description":"旅行规划专家：日行程→POI清单→预算表→打包清单，16条审计规则","name":"lhg-travel","source":"./"}]}
