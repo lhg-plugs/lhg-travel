@@ -16,6 +16,9 @@
 /plugin install lhg-travel@lhg-plugs
 ```
 
+> **⚠️ 价格声明（先看这个）**：机票/酒店实时价格与库存请以官方平台为准自行核实，本插件只做行程框架规划。
+> 任何"实时最低价""保证有房"类表述都会被审计脚本判 blocker 并拦截——本插件不承诺任何实时价格。
+
 ## 它能帮你做出什么
 
 每条产出先过确定性脚本自查，再交人工复核清单——数字全部数自仓库里的审计脚本，不靠模型"自觉"。
@@ -27,7 +30,7 @@
 
 - **零 LLM 成本**：规则是纯 Python 脚本，零第三方依赖，本地运行。
 - **坏 / 好对照可验**：`fixtures/` 里备有坏/好用例，冒烟测试断言命中情况。
-- **冒烟测试**：`python3 smoke_test.py` 本次实测通过 52/53 项（见仓库自带测试输出）。
+- **冒烟全绿**：`python3 smoke_test.py` 53 项全部通过（JSON 合法、frontmatter 完整、命令/skill/agent 齐全）。
 
 ## 它是什么
 
@@ -90,6 +93,7 @@ lhg-travel/
 ├── README.md              # 本文件
 ├── .claude-plugin/
 ├── agents/
+├── assets/
 ├── commands/
 ├── fixtures/
 ├── hooks/
@@ -99,7 +103,7 @@ lhg-travel/
 
 ## 自检与反馈
 
-本插件自带质检：每次使用后可跑 `python3 smoke_test.py` 一键验证。
+本插件自带质检：每次使用后可跑 `python3 smoke_test.py` 一键验证（本次实测 53 项全部通过）。
 
 发现 bug 或有改进建议，以 `[QC] <一句话问题>` 为标题提交到 https://github.com/lhg-plugs/lhg-travel/issues，正文写清"复现步骤 → 实际表现 → 期望表现"。
 
